@@ -6,7 +6,7 @@ This module is meant to be your first program that you've made for EV3.
 
 Authors: Dave Fisher and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+#sam
 
 # ------------------------------------------------------------------
 # TODO: 2. Make the robot say "David Fisher can write E V 3 programs"
@@ -17,3 +17,9 @@ Authors: Dave Fisher and PUT_YOUR_NAME_HERE.
 #   Feel free to run it, change it, and run it again with any message you like.
 #   This program is simple, but if you can do this, then you have the tools to do FAR more.
 # ------------------------------------------------------------------
+import ev3dev.ev3 as ev3
+
+def main():
+    ev3.Sound.speak("allo samuel")
+
+main()

@@ -12,7 +12,7 @@ code.
     
 Authors: Dave Fisher and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+#Sam
 # ------------------------------------------------------------------
 # TODO: 2
 #   Follow along with the lecture to run this program in 2 ways:
@@ -59,8 +59,8 @@ def main():
 def drive_straight(left_motor, right_motor, time_s):
     """Shows an example of using run_forever at a given speed."""
     print("Driving straight...")
-    left_motor.run_forever(speed_sp=400)
-    right_motor.run_forever(speed_sp=400)
+    left_motor.run_forever(speed_sp=-300)
+    right_motor.run_forever(speed_sp=-300)
     time.sleep(time_s)
     left_motor.stop(stop_action="brake")
     right_motor.stop(stop_action="brake")
@@ -71,12 +71,12 @@ def turn_90(left_motor, right_motor):
     """Shows an example of using run_to_rel_pos at a given speed."""
     print("Turning...")
     motor_turns_deg = 486  # May require some tuning depending on your surface!
-    left_motor.run_to_rel_pos(position_sp=motor_turns_deg, speed_sp=400)
-    right_motor.run_to_rel_pos(position_sp=-motor_turns_deg, speed_sp=400)
+    left_motor.run_to_rel_pos(position_sp=motor_turns_deg, speed_sp=-300)
+    right_motor.run_to_rel_pos(position_sp=-motor_turns_deg, speed_sp=-300)
     # Note, that there is no time.sleep needed when using the commands above, but we must add a
     # wait_while command so that the execution of code doesn't get ahead of the robot's physical movements.
     left_motor.wait_while("running")  # Wait for the turn to finish
-    right_motor.wait_while("running")  # (optional) Make sure both motors are done (they finish at the same time)
+    #right_motor.wait_while("running")  # (optional) Make sure both motors are done (they finish at the same time)
     ev3.Sound.beep().wait()  # Fun little beep
 
 
